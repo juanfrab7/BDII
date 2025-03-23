@@ -1,0 +1,16 @@
+USE master; 
+GO
+CREATE database MundoPokemon_DB3;
+GO
+USE MundoPokemon_DB3;
+
+CREATE TABLE Entrenadores(
+	Entrenador_id int not null,
+	Nombre varchar(50),
+	Apellido varchar(50),
+	Nickname varchar(50),
+	Email varchar(100),
+	Clave varchar(25),
+	Fecha_nacimiento date
+
+);
