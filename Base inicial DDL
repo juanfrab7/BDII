@@ -14,3 +14,26 @@ CREATE TABLE Entrenadores(
 	Fecha_nacimiento date
 
 );
+
+CREATE TABLE Elementos(
+	Elemento_id int PRIMARY KEY,
+	Descripcion varchar(50)
+);
+
+CREATE TABLE Habilidades(
+	Habilidad_id int not null,
+	Nombre varchar(50),
+	Descripcion varchar(250),
+	Tipo_id int
+	CONSTRAINT PK_Habilidad PRIMARY KEY(Habilidad_id)
+
+);
+
+CREATE TABLE Pokemon_habilidades(
+	id_habilidades int not null,
+	id_pokemon int not null,
+	id_habilidad int not null,
+	CONSTRAINT PK_Pokemon_Habilidades PRIMARY KEY(id_habilidades),
+	CONSTRAINT FK_Habilidades_habilidad FOREIGN KEY (id_habilidad) REFERENCES Habilidades(Habilidad_id)
+
+);
