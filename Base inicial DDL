@@ -53,3 +53,14 @@ ADD CONSTRAINT PK_Pokemons PRIMARY KEY(id_pokemon);
 
 ALTER TABLE Pokemon_habilidades
 ADD CONSTRAINT FK_habilidaes_Pokemon FOREIGN KEY(id_habilidades) REFERENCES Pokemons(id_pokemon);
+
+USE MundoPokemon_DB3;
+
+CREATE TABLE Cachimba(
+	id int
+);
+
+DROP TABLE Cachimba;
+
+ALTER TABLE Pokemons
+DROP COLUMN altura;
